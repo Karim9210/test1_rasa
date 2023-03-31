@@ -2,15 +2,26 @@ recipe: default.v1
 assistant_id: 20230330-151635-lively-blend
 language: fr
 pipeline:
-- name: SpacyNLP
-  model: fr_core_news_md
-- name: SpacyTokenizer
-- name: SpacyFeaturizer
-- name: RegexFeaturizer
-- name: CRFEntityExtractor
-- name: EntitySynonymMapper
-- name: SklearnIntentClassifier
-policies: null
+  - name: SpacyNLP
+    model: fr_core_news_md
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: CRFEntityExtractor
+  - name: SpacyEntityExtractor
+    model: fr_core_news_md
+  - name: EntitySynonymMapper
+  - name: DIETClassifier
+    epochs: 100
+  - name: ResponseSelector
+    retrieval_intent: faq
+    epochs: 3
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+
+#policies: null
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
@@ -23,3 +34,12 @@ policies: null
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 10
+  - name: AugmentedMemoizationPolicy
+    max_history: 5
+    epochs: 10

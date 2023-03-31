@@ -7,7 +7,7 @@ nlu:
     - Comment ça va ?
     - Bonjour
     - Allo
-    - Cou cou
+    - Coucou
     - Bonsoir
     - Bon matin
     - Bonne matinée
@@ -17,35 +17,36 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
+    - good bye
     - see you later
+    - good night
+    - Au revoir
+    - Chow
+    - Adieu
+    - À la prochaine!
+    - À une prochaine fois
+    - Bonne nuit
+    - Bonne fin de journée
+    - à plus
+    - a plus dans l'bus
+    - À la revoyure
 
 - intent: affirm
   examples: |
     - yes
-    - y
+    - oui
     - indeed
-    - of course
-    - that sounds good
+    - Bien sur
     - correct
 
 - intent: deny
   examples: |
     - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - non
+    - jamais
+    - je ne pense pas
+    - je n'aime pas ça
+    - pas vraiment
 
 - intent: mood_great
   examples: |
