@@ -8,10 +8,60 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - remerciement
+  - raconte_blague
+  - ou_es_tu 
+  - quel_age_as_tu
+  - comment_ca_va
+  - qu_est_ce_que_tu_peux_faire
+  - tu_es_formidable
+  - qui_t_a_construit
+  - quel_loisir_prefere
+  - voulez_vous_m_epouser
+  - je_t_aime
+#################################Aides Sociales ########################################
+  - allocation_rentree_scolaire
+  - R_S_A
+  - aides_sociales
+  - coordonnéees_ccas
+#################################Actes d'état civil ########################################
+  - déclaration_de_décés
+  - acte_état_civil
+  - acte_de_naissance
+  - acte_de_décès
+  - acte_de_mariage
+  - scec
+#################################Déménagement ########################################
+  - changement_adresse_CNI
+  - inscription_liste_élécorale_suite_déménagement
+  - inscription_enfant_école_suite_déménagement
+  - a_faire_suite_déménagement
+#################################Mariage ########################################
+  - témoins_de_mariage
+  - bans_de_mariage
+  - date_de_mariage
+  - démarches_pour_se_marier
+  - démarches_pour_divorce
+  - documents_témoins_de_mariage
+  - documents_pour_se_marier
+  - qui_peut_etre_temoin_mariage
+  - qui_peut_se_marier
+#################################Naissance ########################################
+  - delarations_de_naissance
+
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Bonjour !"
+  - text: "Salut !"
+  - text: "Bienvenue !"
+
+  utter_presentation :
+  - text: "Je suis Sabine le ChatBot relation citoyen d'Anglet. Je réponds à vos questions sur la vie quotidienne, vos démarches, la scolarité de vos enfants, les activités ou encore l'urbanisme. N'hésitez pas à me faire évoluer en faisant part de mes manques éventuels et de vos attentes."
+
+  utter_presentation_2 :
+  - text: "Posez moi vos questions comme si vous vous adressiez à un employé municipal de manière la plus précise possible.
+EX : quels sont les commerces et entreprises de la commune? plutôt que d'inscrire simplement un intitulé métier."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -29,6 +79,78 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-session_config:
+  utter_other_questions:
+  - text: "J'espère que j'ai répondu à votre question. Voulez-vous savoir autre chose?"
+  - text: "Puis-je vous aider pour autre chose?"
+  - text: "Avez-vous une autre question?"
+
+
+
+
+
+  #################################Aides Sociales ########################################
+
+  utter_allocation_rentree_scolaire :
+  - text: "L'allocation de rentrée scolaire (Ars) est versée, sous conditions de ressources, aux familles ayant au moins un enfant scolarisé âgé de 6 à 18 ans."
+
+  utter_allocation_rentree_scolaire_2:
+  - text: "Son versement est automatique pour les allocataires éligibles dont les enfants ont moins de 16 ans. Une déclaration de scolarisation est demandée pour les enfants entre 16 et 18 ans."
+
+  utter_allocation_rentree_scolaire_3:
+  - text: "👉🏻 Plus d'informations sur le site de la [CAF](https://www.caf.fr/allocataires/aides-et-demarches/droits-et-prestations)"
+
+  utter_R_S_A :
+  - text: "Le Revenu de Solidarité Active (RSA) est un complément de ressources versé sous certaines conditions par la Caisse d'Allocations Familiales (CAF)."
+
+  utter_R_S_A_2 :
+  - text: "Vous pouvez :
+- Faire une simulation pour savoir si vous êtes éligible
+- Faire votre demande en ligne
+👉🏻 Plus d'informations sur le site de la [CAF](https://www.caf.fr/allocataires/aides-et-demarches)"
+
+  utter_aides_sociales :
+  - text: "Différentes aides sont disponibles en fonction de votre situation. Nous vous invitons à utiliser le [portail gouvernemental](https://www.mesdroitssociaux.gouv.fr/accueil/) pour simuler vos prestations, consulter vos droits et effectuer vos démarches."
+
+  utter_aides_sociales_2 :
+  - text: "👉🏻 Pour plus d'informations, vous pouvez également consulter la [boite à outils du Centre Communal d'Action Sociale (CCAS)](https://www.anglet.fr/services/action-sociale-aides/anglet-solidaire/)"
+
+  utter_coordonnéees_ccas :
+  - text: "Votre Centre Communal d'Action Sociale (CCAS) est joignable au 05.59.58.35.23
+✉️ ccas@anglet.fr"
+
+  utter_coordonnéees_ccas_2 :
+  - text: "Adresse : POLE SOLIDARITE
+2 AVENUE BELLE MARION - ANGLET
+Horaires d'ouverture : du lundi au Vendredi - De 9 h à 12 h et de 13 h 30 à 17 h"
+
+#################################Actes d'état civil ########################################
+  utter_déclaration_de_décés :
+  - text: "Les démarches pour déclarer un décès sont détaillées sur l'infographie ci-dessous."
+
+  utter_déclaration_de_décés_2 :
+  - text: "La déclaration de décès est une démarche obligatoire qui doit intervenir dans les 24h suivant sa constatation."
+
+  utter_déclaration_de_décés_3 :
+  - image: "https://www.service-public.fr/webapp/images/vdd/extralarge/I4705.jpg"
+
+  utter_acte_état_civil :
+  - text: "Les démarches pour obtenir un acte d'état civil dépendent du type d'acte. Votre demande concerne :"
+    buttons:
+    - title: "Acte de naissance"
+      payload: "/acte_de_naissance"
+    - title: "Acte de décès"
+      payload: "/acte_de_décès"
+    - title: "Acte de mariage"
+      payload: "/acte_de_mariage"
+
+
+
+
+
+
+
+
+
+  session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

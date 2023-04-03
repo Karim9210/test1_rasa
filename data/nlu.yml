@@ -59,7 +59,6 @@ nlu:
 
 - intent: mood_unhappy
   examples: |
-
     - Je suis triste
     - Je ne me sens pas très bien
     - super triste
@@ -86,7 +85,6 @@ nlu:
     - Dites moi votre nom
     - ton nom c'est quoi
 
-
 - intent: remerciement
   examples: |
     - Merci
@@ -100,21 +98,17 @@ nlu:
     - Je te suis très reconnaissant
     - Je vous suis éternellement redevable
 
-- intent: blague
+- intent: raconte_blague
   examples: |
     - Raconte moi une blague
     - Dit un truc drôle
-    - Raconte moi ta meilleure histoire comique
+    - Raconte moi ta meilleure [histoire comique](blague)
     - Une blague svp   
     - Fait moi rire!
     - je veux une blague maintenant 
-    - Es-tu capable de me faire rire?
-    - Je veux entendre un anecdote humoristique
+    - Es-tu capable de me [faire rire](blague)?
+    - Je veux entendre un [anecdote humoristique](blague)
     - Soit drole !
-  entities:
-    - blague
-    - histoire_comique
-    - histoire_drôle
 
 - intent: ou_es_tu
   examples: |
@@ -219,7 +213,6 @@ nlu:
     - Soyez ma femme, pour le reste de nos jours!
     - Puis-je te demander ta main en marriage?
 
-
 - intent: je_t_aime
   examples: |
     - Je t'aime
@@ -245,3 +238,175 @@ nlu:
     - Tu me désoles
     - Pauvre robot inutile
     - Tes réponses sont d'une idiotie complète
+
+#################################Aides Sociales########################################
+
+- intent: allocation_rentree_scolaire
+  examples: |
+    - Comment bénéficier de l'[allocation de rentrée scolaire]{"entity": "ARS", "value": "ARS"} ?
+    - [allocation scolaire]{"entity": "ARS", "value": "ARS"}
+    - [ARS](ARS)
+    - [Allocation école]{"entity": "ARS", "value": "ARS"}
+ 
+- intent: R_S_A
+  examples: |
+    - Comment faire une [demande de RSA]{"entity": "RSA", "value": "RSA"} ?
+    - [revenu de solidarité active]{"entity": "RSA", "value": "RSA"}
+    - [RSA](RSA)
+    - [RMI](RSA)
+
+- intent: aides_sociales
+  examples: |
+    - De quelles aides puis-je bénéficier ?
+    - CAF
+    - aides sociales
+    - j'ai droit à quelle aide?
+
+- intent: coordonnéees_ccas
+  examples: |
+    - Quelles sont les coordonnées du [Centre Communal d'Action Sociale]{"entity": "CCAS", "value": "CCAS"} ?
+    - [Coordonnées CCAS]{"entity": "CCAS", "value": "CCAS"}
+    - [appeler CCAS]{"entity": "CCAS", "value": "CCAS"}
+    - [centre social]{"entity": "CCAS", "value": "CCAS"}
+    - [Pole solidarité]{"entity": "CCAS", "value": "CCAS"}
+    - [solidartité](CCAS)
+    - [besoin d'aide]{"entity": "CCAS", "value": "CCAS"}
+    - [j'ai faim]{"entity": "CCAS", "value": "CCAS"}
+    - [j'ai froid]{"entity": "CCAS", "value": "CCAS"}
+
+#################################Actes d'état civil########################################
+
+- intent: déclaration_de_décés
+  examples: |
+    - Comment [déclarer un décès]{"entity": "declarer_décès", "value": "déclarer_décès"} ?
+    - [déclaration décès]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+    - [décès](declarer_décès)
+    - [Mon père est mort]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+    - [Ma mère est morte]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+    - [Mon père est décedé]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+
+- intent: acte_état_civil
+  examples: |
+    - Comment obtenir un acte d'état civil ?
+    - état civil
+    - acte d'état civil
+    - acte état civil
+
+- intent: acte_de_naissance
+  examples: |
+    - Comment obtenir un [acte de naissance]{"entity": "acte_naissance", "value": "acte_naissance"}  ?
+    - [acte naissance](acte_naissance)
+
+- intent: acte_de_décès
+  examples: |
+    - Comment obtenir un [acte de décès]{"entity": "acte_décès", "value": "acte_décès"} ?
+    - [acte de décès]{"entity": "acte_décès", "value": "acte_décès"}
+    - [papier décès]{"entity": "acte_décès", "value": "acte_décès"}
+    - [attesation décès]{"entity": "acte_décès", "value": "acte_décès"}
+
+- intent: acte_de_mariage
+  examples: |
+    - Comment obtenir un [acte de mariage]{"entity": "acte_mariage", "value": "acte_mariage"} ?
+    - [attesation mariage]{"entity": "acte_mariage", "value": "acte_mariage"}
+    - [acte mariage]{"entity": "acte_mariage", "value": "acte_mariage"}
+
+- intent: scec
+  examples: |
+    - Quelles sont les coordonnées du Service central d'état civil de Nantes ?
+    - Quelles sont les coordonnées du SCEC ?
+    - SCEC
+
+#################################Déménagement########################################
+
+- intent: changement_adresse_CNI
+  examples: |
+    - Comment changer l'adresse de ma CNI ?
+    - changer adresse carte d'identité
+
+- intent: inscription_liste_élécorale_suite_déménagement
+  examples: |
+    - Comment s'inscrire sur les liste électorales suite à un changement d'adresse ?
+    - Comment s'inscrire sur les liste électorales suite à un changement d'adresse ?
+    - inscription listes électorales après Déménagement
+    - Je déménage , comment je reste sur les listes électorales
+
+- intent: inscription_enfant_école_suite_déménagement
+  examples: |
+    - Je déménage, comment inscrire mes enfants dans leur nouvelle école ?
+    - enfant nouvelle école
+
+- intent: a_faire_suite_déménagement
+  examples: |
+    - Que dois-je faire suite à mon récent emménagement ?
+    - Je viens d'emménager
+
+#################################Mariage########################################
+
+- intent: témoins_de_mariage
+  examples: |
+    - Combien de [témoins sont nécessaires pour mon mariage]{"entity": "témoin_mariage", "value": "témoin_mariage"} ?
+    - Combien de [témoins pour un mariage]{"entity": "témoin_mariage", "value": "témoin_mariage"}?
+    - avoir [plus de 2 témoins de mariage]{"entity": "témoin_mariage", "value": "témoin_mariage"} ?
+    - témoins de mariage
+
+- intent: bans_de_mariage
+  examples: |
+    - Combien de temps sont publiés les bans de mariage ?
+    - bans de mariage
+    - durée pour la publication des bans de mariage
+
+- intent: date_de_mariage
+  examples: |
+    - Comment obtenir une [date pour mon mariage]{"entity": "date_mariage", "value": "date_mariage"} ?
+    - comment connaître le [délai minimum pour se marier]{"entity": "date_mariage", "value": "date_mariage"} ?
+    - Quel est le délai minimum pour se marier ?
+
+- intent: démarches_pour_se_marier
+  examples: |
+    - Quelles sont les [démarches à effectuer pour se marier]{"entity": "démarche_mariage", "value": "démarche_mariage"} ?
+    - [comment se marier]{"entity": "démarche_mariage", "value": "démarche_mariage"} ?
+    - obtenir un [dossier de mariage]{"entity": "démarche_mariage", "value": "démarche_mariage"}
+    - les [démarches à effectuer pour un mariage]{"entity": "démarche_mariage", "value": "démarche_mariage"}
+    - Je vais me marier
+
+- intent: démarches_pour_divorce
+  examples: |
+    - [Je veux divorcer]{"entity": "démarche_divorce", "value": "démarche_divorce"}
+    - [comment faire pour divorcer]{"entity": "démarche_divorce", "value": "démarche_divorce"} ?
+    - [Je me sépare de ma femme]{"entity": "démarche_divorce", "value": "démarche_divorce"}
+    - [Je me sépare de mon mari]{"entity": "démarche_divorce", "value": "démarche_divorce"}
+    - Je demande le divorce
+
+
+- intent: documents_témoins_de_mariage
+  examples: |
+    - Quels documents doivent fournir les témoins de mariage ?
+    - Quels justificatifs pour les témoins de mariage ?
+    - Quels documents doivent fournir les témoins de mariage ?
+
+- intent: documents_pour_se_marier
+  examples: |
+    - Quels sont les [documents à fournir pour un mariage]{"entity": "documents_mariage", "value": "documents_mariage"} ?
+    - Je vais me marier, quels justificatifs dois je fournir ?
+    - Quels [justificatifs pour un dossier de mariage]{"entity": "documents_mariage", "value": "documents_mariage"} ?
+    - De quels justificatifs ai-je besoin pour le dossier de mariage ?
+
+- intent: qui_peut_etre_temoin_mariage
+  examples: |
+    - Qui peut être témoin de mariage?
+    - Qui Puis-je prendre comme témoin de mariage ?
+
+- intent: qui_peut_se_marier
+  examples: |
+    - Qui peut se marier ?
+    - Puis-je me marier ?
+    - les conditions pour se marier ?
+
+#################################Naissance########################################
+
+- intent: delarations_de_naissance
+  examples: |
+    - comment [déclarer une naissance]{"entity": "déclaration_naisance", "value": "déclaration_naisance"} ?
+    - [déclaration naissance]{"entity": "déclaration_naisance", "value": "déclaration_naisance"}
+    - [déclarer nouceau né]{"entity": "déclaration_naisance", "value": "déclaration_naisance"}
+    - [déclaration nouveau né]{"entity": "déclaration_naisance", "value": "déclaration_naisance"}

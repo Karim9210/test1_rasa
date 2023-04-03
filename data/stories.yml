@@ -2,12 +2,13 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: presentation
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - action: utter_presentation
+  - action: utter_presentation_2
+
 
 - story: sad path 1
   steps:
@@ -28,3 +29,40 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: allocation rentree scolaire
+  steps:
+  - intent: allocation_rentree_scolaire
+  - action: utter_allocation_rentree_scolaire
+  - action: utter_allocation_rentree_scolaire_2
+  - action: utter_allocation_rentree_scolaire_3
+  - action: utter_other_questions
+
+- story: RSA
+  steps:
+  - intent: R_S_A
+  - action: utter_R_S_A
+  - action: utter_R_S_A_2
+  - action: utter_other_questions
+
+- story: Aides Sociales
+  steps:
+  - intent: aides_sociales
+  - action: utter_aide_sociales
+  - action: utter_aide_sociales_2
+  - action: utter_other_questions
+
+- story: Coordonnées CCAS
+  steps:
+  - intent: coordonnéees_ccas
+  - action: utter_coordonnéees_ccas
+  - action: utter_coordonnéees_ccas_2
+  - action: utter_other_questions
+
+- story: Déclaration décès
+  steps:
+  - intent: déclaration_de_décés
+  - action: utter_déclaration_de_décés
+  - action: utter_déclaration_de_décés_2
+  - action: utter_déclaration_de_décés_3
+  - action: utter_other_questions
