@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ARS",
+      "2": "I-ARS",
+      "3": "L-ARS",
+      "4": "U-ARS",
+      "5": "B-CCAS",
+      "6": "I-CCAS",
+      "7": "L-CCAS",
+      "8": "U-CCAS",
+      "9": "B-RSA",
+      "10": "I-RSA",
+      "11": "L-RSA",
+      "12": "U-RSA",
+      "13": "B-blague",
+      "14": "I-blague",
+      "15": "L-blague",
+      "16": "U-blague",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ARS": 1,
+      "I-ARS": 2,
+      "L-ARS": 3,
+      "U-ARS": 4,
+      "B-CCAS": 5,
+      "I-CCAS": 6,
+      "L-CCAS": 7,
+      "U-CCAS": 8,
+      "B-RSA": 9,
+      "I-RSA": 10,
+      "L-RSA": 11,
+      "U-RSA": 12,
+      "B-blague": 13,
+      "I-blague": 14,
+      "L-blague": 15,
+      "U-blague": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

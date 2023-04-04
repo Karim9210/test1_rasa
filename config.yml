@@ -7,7 +7,6 @@ pipeline:
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
-  - name: CRFEntityExtractor
   - name: SpacyEntityExtractor
     model: fr_core_news_md
   - name: EntitySynonymMapper
@@ -15,7 +14,7 @@ pipeline:
     epochs: 100
   - name: ResponseSelector
     retrieval_intent: faq
-    epochs: 3
+    epochs: 20
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
@@ -37,9 +36,11 @@ pipeline:
 
 policies:
   - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
   - name: TEDPolicy
     max_history: 5
     epochs: 10
-  - name: AugmentedMemoizationPolicy
-    max_history: 5
-    epochs: 10
+    constrain_similarities: true

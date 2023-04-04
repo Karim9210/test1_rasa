@@ -4,7 +4,6 @@ nlu:
 - intent: greet
   examples: |
     - Salut
-    - Comment ça va ?
     - Bonjour
     - Allo
     - Coucou
@@ -17,9 +16,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good bye
-    - see you later
-    - good night
     - Au revoir
     - Chow
     - Adieu
@@ -35,7 +31,6 @@ nlu:
   examples: |
     - yes
     - oui
-    - indeed
     - Bien sur
     - correct
 
@@ -50,41 +45,377 @@ nlu:
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - parfait
+    - bien
+    - super
+    - Comme un roi
+    - Incroyable
+    - Je me sens très bien
+    - Je vais bien
+    - Je vais super bien
+    - Comme un dieu
+    - Super bien
+
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Je suis triste
+    - Je ne me sens pas très bien
+    - super triste
+    - Pas très bien
+    - Pas super
+    - un peu triste
+    - j'ai connu des jours meilleurs
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Qui es tu?
+    - Es tu une personne?
+    - Est-ce que je parle à un robot?
+    - Est-ce que je parle à un humain?
+    - Est-ce que tu es un robot?
+    - Quel est votre prénom?
+    - Tu es qui?
+    - T'es quoi?
+    - Quel est ton nom?
+    - Quel est votre identité?
+    - C'est quoi ton nom?
+    - Qui êtes vous?
+    - Dit moi tu es qui
+    - Dites moi votre nom
+    - ton nom c'est quoi
+
+- intent: remerciement
+  examples: |
+    - Merci
+    - Mille mercis
+    - Je vous remercie
+    - Merci beaucoup
+    - C'est apprécié
+    - C'est vraiment gentil de ta part
+    - Je vous adresse mes plus vifs remerciements
+    - Merci de votre aide
+    - Je te suis très reconnaissant
+    - Je vous suis éternellement redevable
+
+- intent: raconte_blague
+  examples: |
+    - Raconte moi une blague
+    - Dit un truc drôle
+    - Raconte moi ta meilleure [histoire comique](blague)
+    - Une blague svp   
+    - Fait moi rire!
+    - je veux une blague maintenant 
+    - Es-tu capable de me [faire rire](blague)?
+    - Je veux entendre un [anecdote humoristique](blague)
+    - Soit drole !
+
+- intent: ou_es_tu
+  examples: |
+    - Où es-tu?
+    - À quel endroit tu te situes?
+    - Vous vous situez ou?
+    - À quel emplacement je peux vous trouver?
+    - Quel est ton emplacement?
+    - Ou puis-je vous trouver?
+    - t'es ou?
+    - Tu es à quel place?
+    - Quel est ton lieu?
+
+- intent: quel_age_as_tu
+  examples: |
+    - Tu as quel âge?
+    - Quel age as tu?
+    - Ton age c'est quoi
+    - Tu es vieux comment?
+    - Vous êtes né quand
+    - T'as quel age?
+    - Ta naissance était quand?
+    - À quel moment vous êtes né?
+    - Tu a été conçu quand?
+    - Ta création à eu lieu à quel moment?
+
+- intent: comment_ca_va
+  examples: |
+    - Comment ça va?
+    - Tu vas bien?
+    - Vous vous portez bien?
+    - ca va?
+    - Comment se passe ta journée
+    - Ta journée se passe bien pour toi?
+    - De quel humeur es-tu?
+    - Yo, ça va?
+    - ça roule?
+    - ca se passe bien?
+
+- intent: qu_est_ce_que_tu_peux_faire
+  examples: |
+    - Qu'est que tu peux faire?
+    - Quels sont vos capacités?
+    - Tu peux faire quoi pour moi
+    - À quoi tu sers?
+    - Je peux voir un menu de tes options?
+    - Avec quoi pouvez-vous m'aider?
+    - Liste de tes capacités
+    - Quel est votre utilité?
+    - Tous tes options svp
+    - Que peux-tu faire pour moi?
+
+- intent: tu_es_formidable
+  examples: |
+    - Tu es formidable
+    - Vous êtes un fantastique robot
+    - Meilleur chatbot j'ai jamais vu
+    - Tu es le roi des robots
+    - Vous êtes génial
+    - Tu es le meilleur
+    - Wow, tu es vraiment trop fort
+    - Votre Intelligence est inégalé
+    - Solide performance de votre intelligence artificielle
+    - ton ia est solide
+
+- intent: qui_t_a_construit
+  examples: |
+    - Qui est-ce qui t'a construit
+    - Qui est ton constructeur?
+    - Quel personne t'a conçu?
+    - Qui sont les fabricateurs ce bot?
+    - Parle moi de tes concepteurs
+    - Qui est derrière la programmation de cet assistant?
+    - quel équipe est responsable de ton existence?
+    - Qui t'a créé?
+    - Parle moi de ta création
+    - Tes créateurs, qui sont-ils?
+
+- intent: quel_loisir_prefere
+  examples: |
+    - Quel est ton loisir?
+    - Dit moi ton hobby préféré?
+    - Quel est votre passe temps?
+    - Qu'est ce que vous faites dans vos temps mort
+    - Tu t'occupes de quel manière.
+    - Qu'est ce que tu fais dans la vie pour le plaisir
+    - Qu'aimer vous faire de vos temps morts?
+    - Parles moi de ton loisir préféré!
+    - Comment vous utiliser vos temps morts?
+    - De quel manière est ce que tu te distrais?
+
+- intent: voulez_vous_m_epouser
+  examples: |
+    - Voulez-vous m'épouser?
+    - Tu veux me marier?
+    - On se marrie quand?
+    - Je veux te demander ta main en marriage?
+    - Épouse-moi
+    - Tu veux m'épouser svp
+    - Je vous en prie, mariez moi!
+    - Tu veux être mon mari?
+    - Soyez ma femme, pour le reste de nos jours!
+    - Puis-je te demander ta main en marriage?
+
+- intent: je_t_aime
+  examples: |
+    - Je t'aime
+    - Je t'adore
+    - Je te veux à jamais
+    - Je suis follement amoureux de toi
+    - Je suis dingue de toi
+    - J'ai besoin de toi
+    - Je crois que je suis entrain de tomber amoureux de toi
+    - Tu es l'amour de ma vie
+    - Je t'aime à la folie!
+    - Tu es mon coup de foudre
+
+- intent: tu_es_nul
+  examples: |
+    - Tu m'énerves
+    - Tu me tapes sur les nerfs
+    - Vous êtes hautement inutile
+    - Votre incompétence n'a pas d'égal
+    - Vous êtes un robot stupide
+    - Tu es nul
+    - Tu sers à rien
+    - Tu me désoles
+    - Pauvre robot inutile
+    - Tes réponses sont d'une idiotie complète
+
+#################################Aides Sociales########################################
+
+- intent: allocation_rentree_scolaire
+  examples: |
+    - Comment bénéficier de l'[allocation de rentrée scolaire]{"entity": "ARS", "value": "ARS"} ?
+    - [allocation scolaire]{"entity": "ARS", "value": "ARS"}
+    - [ARS](ARS)
+    - [Allocation école]{"entity": "ARS", "value": "ARS"}
+ 
+- intent: R_S_A
+  examples: |
+    - Comment faire une [demande de RSA]{"entity": "RSA", "value": "RSA"} ?
+    - [revenu de solidarité active]{"entity": "RSA", "value": "RSA"}
+    - [RSA](RSA)
+    - [RMI](RSA)
+
+- intent: aides_sociales
+  examples: |
+    - De quelles aides puis-je bénéficier ?
+    - CAF
+    - aides sociales
+    - j'ai droit à quelle aide?
+
+- intent: coordonnéees_ccas
+  examples: |
+    - Quelles sont les coordonnées du [Centre Communal d'Action Sociale]{"entity": "CCAS", "value": "CCAS"} ?
+    - [Coordonnées CCAS]{"entity": "CCAS", "value": "CCAS"}
+    - [appeler CCAS]{"entity": "CCAS", "value": "CCAS"}
+    - [centre social]{"entity": "CCAS", "value": "CCAS"}
+    - [Pole solidarité]{"entity": "CCAS", "value": "CCAS"}
+    - [solidartité](CCAS)
+    - [besoin d'aide]{"entity": "CCAS", "value": "CCAS"}
+    - [j'ai faim]{"entity": "CCAS", "value": "CCAS"}
+    - [j'ai froid]{"entity": "CCAS", "value": "CCAS"}
+
+#################################Actes d'état civil########################################
+
+- intent: déclaration_de_décés
+  examples: |
+    - Comment [déclarer un décès]{"entity": "declarer_décès", "value": "déclarer_décès"} ?
+    - [déclaration décès]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+    - [décès](declarer_décès)
+    - [Mon père est mort]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+    - [Ma mère est morte]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+    - [Mon père est décedé]{"entity": "declarer_décès", "value": "déclarer_décès"} 
+
+- intent: acte_état_civil
+  examples: |
+    - Comment obtenir un acte d'état civil ?
+    - état civil
+    - acte d'état civil
+    - acte état civil
+
+- intent: acte_de_naissance
+  examples: |
+    - Comment obtenir un [acte de naissance]{"entity": "acte_naissance", "value": "acte_naissance"}  ?
+    - [acte naissance](acte_naissance)
+
+- intent: né_en_France
+- intent: né_étranger
+
+- intent: acte_de_décès
+  examples: |
+    - Comment obtenir un [acte de décès]{"entity": "acte_décès", "value": "acte_décès"} ?
+    - [acte de décès]{"entity": "acte_décès", "value": "acte_décès"}
+    - [papier décès]{"entity": "acte_décès", "value": "acte_décès"}
+    - [attesation décès]{"entity": "acte_décès", "value": "acte_décès"}
+
+- intent: décès_en_France
+- intent: décès_étranger
+ 
+- intent: acte_de_mariage
+  examples: |
+    - Comment obtenir un [acte de mariage]{"entity": "acte_mariage", "value": "acte_mariage"} ?
+    - [attesation mariage]{"entity": "acte_mariage", "value": "acte_mariage"}
+    - [acte mariage]{"entity": "acte_mariage", "value": "acte_mariage"}
+
+- intent: mariage_en_France
+- intent: mariage_étranger
+
+- intent: scec
+  examples: |
+    - Quelles sont les coordonnées du Service central d'état civil de Nantes ?
+    - Quelles sont les coordonnées du SCEC ?
+    - SCEC
+
+#################################Déménagement########################################
+
+- intent: changement_adresse_CNI
+  examples: |
+    - Comment changer l'adresse de ma CNI ?
+    - changer adresse carte d'identité
+
+- intent: inscription_liste_élécorale_suite_déménagement
+  examples: |
+    - Comment s'inscrire sur les liste électorales suite à un changement d'adresse ?
+    - Comment s'inscrire sur les liste électorales suite à un changement d'adresse ?
+    - inscription listes électorales après Déménagement
+    - Je déménage , comment je reste sur les listes électorales
+
+- intent: inscription_enfant_école_suite_déménagement
+  examples: |
+    - Je déménage, comment inscrire mes enfants dans leur nouvelle école ?
+    - enfant nouvelle école
+
+- intent: a_faire_suite_déménagement
+  examples: |
+    - Que dois-je faire suite à mon récent emménagement ?
+    - Je viens d'emménager
+
+#################################Mariage########################################
+
+- intent: témoins_de_mariage
+  examples: |
+    - Combien de [témoins sont nécessaires pour mon mariage]{"entity": "témoin_mariage", "value": "témoin_mariage"} ?
+    - Combien de [témoins pour un mariage]{"entity": "témoin_mariage", "value": "témoin_mariage"}?
+    - avoir [plus de 2 témoins de mariage]{"entity": "témoin_mariage", "value": "témoin_mariage"} ?
+    - témoins de mariage
+
+- intent: bans_de_mariage
+  examples: |
+    - Combien de temps sont publiés les bans de mariage ?
+    - bans de mariage
+    - durée pour la publication des bans de mariage
+
+- intent: date_de_mariage
+  examples: |
+    - Comment obtenir une [date pour mon mariage]{"entity": "date_mariage", "value": "date_mariage"} ?
+    - comment connaître le [délai minimum pour se marier]{"entity": "date_mariage", "value": "date_mariage"} ?
+    - Quel est le délai minimum pour se marier ?
+
+- intent: démarches_pour_se_marier
+  examples: |
+    - Quelles sont les [démarches à effectuer pour se marier]{"entity": "démarche_mariage", "value": "démarche_mariage"} ?
+    - [comment se marier]{"entity": "démarche_mariage", "value": "démarche_mariage"} ?
+    - obtenir un [dossier de mariage]{"entity": "démarche_mariage", "value": "démarche_mariage"}
+    - les [démarches à effectuer pour un mariage]{"entity": "démarche_mariage", "value": "démarche_mariage"}
+    - Je vais me marier
+
+- intent: démarches_pour_divorce
+  examples: |
+    - [Je veux divorcer]{"entity": "démarche_divorce", "value": "démarche_divorce"}
+    - [comment faire pour divorcer]{"entity": "démarche_divorce", "value": "démarche_divorce"} ?
+    - [Je me sépare de ma femme]{"entity": "démarche_divorce", "value": "démarche_divorce"}
+    - [Je me sépare de mon mari]{"entity": "démarche_divorce", "value": "démarche_divorce"}
+    - Je demande le divorce
+
+
+- intent: documents_témoins_de_mariage
+  examples: |
+    - Quels documents doivent fournir les témoins de mariage ?
+    - Quels justificatifs pour les témoins de mariage ?
+    - Quels documents doivent fournir les témoins de mariage ?
+
+- intent: documents_pour_se_marier
+  examples: |
+    - Quels sont les [documents à fournir pour un mariage]{"entity": "documents_mariage", "value": "documents_mariage"} ?
+    - Je vais me marier, quels justificatifs dois je fournir ?
+    - Quels [justificatifs pour un dossier de mariage]{"entity": "documents_mariage", "value": "documents_mariage"} ?
+    - De quels justificatifs ai-je besoin pour le dossier de mariage ?
+
+- intent: qui_peut_etre_temoin_mariage
+  examples: |
+    - Qui peut être témoin de mariage?
+    - Qui Puis-je prendre comme témoin de mariage ?
+
+- intent: qui_peut_se_marier
+  examples: |
+    - Qui peut se marier ?
+    - Puis-je me marier ?
+    - les conditions pour se marier ?
+
+#################################Naissance########################################
+
+- intent: delarations_de_naissance
+  examples: |
+    - comment [déclarer une naissance]{"entity": "déclaration_naisance", "value": "déclaration_naisance"} ?
+    - [déclaration naissance]{"entity": "déclaration_naisance", "value": "déclaration_naisance"}
+    - [déclarer nouceau né]{"entity": "déclaration_naisance", "value": "déclaration_naisance"}
+    - [déclaration nouveau né]{"entity": "déclaration_naisance", "value": "déclaration_naisance"}
