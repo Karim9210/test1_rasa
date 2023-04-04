@@ -30,6 +30,9 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+
+  #################################Aides Sociales ########################################
+
 - story: allocation rentree scolaire
   steps:
   - intent: allocation_rentree_scolaire
@@ -59,10 +62,104 @@ stories:
   - action: utter_coordonnéees_ccas_2
   - action: utter_other_questions
 
-- story: Déclaration décès
+#################################Actes d'état civil ########################################
+
+- story: Déclaration décès 
   steps:
   - intent: déclaration_de_décés
   - action: utter_déclaration_de_décés
   - action: utter_déclaration_de_décés_2
   - action: utter_déclaration_de_décés_3
   - action: utter_other_questions
+
+- story: actes état civil 
+  steps:
+  - intent: acte_état_civil
+  - action: utter_acte_état_civil
+
+- story: actes de naissance 
+  steps:
+  - intent: acte_de_naissance
+  - action: utter_acte_de_naissance
+
+- story: né en France 
+  steps:
+  - intent: né_en_France
+  - action: utter_né_en_France
+  - action:   utter_né_en_France_2
+  - action: utter_other_questions
+
+
+- story: né à l'étranger
+  steps:
+  - intent: né_étranger
+  - action: utter_né_étranger
+  - action: utter_né_étranger_2
+  - action: utter_other_questions
+
+
+- story: acte de décès
+  steps:
+  - intent: acte_de_décès
+  - action: utter_acte_de_décès
+
+- story: décès en France
+  steps:
+  - intent: décès_en_France
+  - action: utter_décès_en_France
+  - action: utter_décès_en_France_2
+  - action: utter_other_questions
+
+- story: décès à l'étranger
+  steps:
+  - intent: décès_étranger
+  - action: utter_décès_étranger
+  - action: utter_décès_étranger_2
+  - action: utter_décès_étranger_3
+  - action: utter_other_questions
+
+- story: acte de mariage
+  steps:
+  - intent: acte_de_mariage
+  - action: utter_acte_de_mariage
+
+- story: mariage en france
+  steps:
+  - intent: mariage_en_France
+  - action: utter_mariage_en_France j
+  - action: utter_mariage_en_France_2 
+  - action: utter_other_questions
+
+
+- story: mariage à l'étranger
+  steps:
+  - intent: mariage_étranger
+  - action: utter_mariage_étranger 
+  - action: utter_mariage_étranger_2 
+  - action: utter_mariage_étranger_3
+  - action: utter_mariage_étranger_4
+  - action: utter_other_questions
+
+
+- story: scec
+  steps:
+  - intent: scec
+  - action: utter_scec
+  - action: utter_scec_2
+  - action: utter_scec_3
+  - action: utter_other_questions
+
+
+#################################Déménagement########################################
+
+- story: changement adresse CNI
+  steps:
+  - intent: changement_adresse_CNI
+  - action: utter_changement_adresse_CNI
+  - action: utter_changement_adresse_CNI_2
+  - action: utter_other_questions
+
+- story: inscription liste élécorale suite déménagement
+  steps:
+  - intent: inscription_liste_élécorale_suite_déménagement
+  - action: utter_inscription_liste_élécorale_suite_déménagement

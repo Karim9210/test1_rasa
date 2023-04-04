@@ -297,6 +297,9 @@ nlu:
     - Comment obtenir un [acte de naissance]{"entity": "acte_naissance", "value": "acte_naissance"}  ?
     - [acte naissance](acte_naissance)
 
+- intent: né_en_France
+- intent: né_étranger
+
 - intent: acte_de_décès
   examples: |
     - Comment obtenir un [acte de décès]{"entity": "acte_décès", "value": "acte_décès"} ?
@@ -304,11 +307,17 @@ nlu:
     - [papier décès]{"entity": "acte_décès", "value": "acte_décès"}
     - [attesation décès]{"entity": "acte_décès", "value": "acte_décès"}
 
+- intent: décès_en_France
+- intent: décès_étranger
+ 
 - intent: acte_de_mariage
   examples: |
     - Comment obtenir un [acte de mariage]{"entity": "acte_mariage", "value": "acte_mariage"} ?
     - [attesation mariage]{"entity": "acte_mariage", "value": "acte_mariage"}
     - [acte mariage]{"entity": "acte_mariage", "value": "acte_mariage"}
+
+- intent: mariage_en_France
+- intent: mariage_étranger
 
 - intent: scec
   examples: |

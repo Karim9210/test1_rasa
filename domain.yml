@@ -28,8 +28,14 @@ intents:
   - déclaration_de_décés
   - acte_état_civil
   - acte_de_naissance
+  - né_en_France
+  - né_étranger
   - acte_de_décès
+  - décès_en_France
+  - décès_étranger
   - acte_de_mariage
+  - mariage_en_France
+  - mariage_étranger
   - scec
 #################################Déménagement ########################################
   - changement_adresse_CNI
@@ -57,7 +63,7 @@ responses:
   - text: "Bienvenue !"
 
   utter_presentation :
-  - text: "Je suis Sabine le ChatBot relation citoyen d'Anglet. Je réponds à vos questions sur la vie quotidienne, vos démarches, la scolarité de vos enfants, les activités ou encore l'urbanisme. N'hésitez pas à me faire évoluer en faisant part de mes manques éventuels et de vos attentes."
+  - text: "Je suis Sabine, votre agent conversationnel de la ville d'Anglet. Je réponds à vos questions sur la vie quotidienne, vos démarches, la scolarité de vos enfants, les activités ou encore l'urbanisme. N'hésitez pas à me faire évoluer en faisant part de mes manques éventuels et de vos attentes."
 
   utter_presentation_2 :
   - text: "Posez moi vos questions comme si vous vous adressiez à un employé municipal de manière la plus précise possible.
@@ -143,6 +149,130 @@ Horaires d'ouverture : du lundi au Vendredi - De 9 h à 12 h et de 13 h 30 à 17
     - title: "Acte de mariage"
       payload: "/acte_de_mariage"
 
+  utter_acte_de_naissance :
+  - text: "La démarche pour obtenir un acte de naissance dépend du lieu de naissance du demandeur. S'agit-il d'une personne née :"
+    buttons:
+    - title: "En France"
+      payload: "/né_en_France"
+    - title: "A l'étranger"
+      payload: "/né_étranger"
+
+  utter_né_en_France :
+  - text: "Pour obtenir un acte de naissance d'une personne née en France, plusieurs possibilités s'offrent à vous. Vous pouvez :
+
+◾️ Faire la demande directement en ligne
+◾️ Déposer votre demande au guichet de la Mairie du lieu de naissance
+◾️ Envoyer la demande par voie postale à la Mairie du lieu de naissance en indiquant les noms, prénoms et date de naissance de la personne concernée par l'acte (+ noms et prénoms des parents pour une copie intégrale ou un extrait avec filiation), ainsi que l'adresse du demandeur"
+
+  utter_né_en_France_2 :
+  - text: "👉🏻 Plus d'informations sur le [site Service Public](https://www.service-public.fr/particuliers/vosdroits/F1427)"
+
+  utter_né_étranger :
+  - text: "Pour obtenir un acte de naissance d'une personne née à l'étranger, plusieurs possibilités s'offrent à vous. Vous pouvez :"
+
+◾️ Faire la demande directement en ligne
+◾️ Envoyer la demande par voie postale auprès du Service central d'état civil de Nantes (Ministère des Affaires Étrangères) en indiquant les noms, prénoms et date de naissance de la personne concernée par l'acte (+ noms et prénoms des parents pour une copie intégrale ou un extrait avec filiation), ainsi que l'adresse du demandeur"
+
+  utter_né_étranger_2 :
+  - text: "👉🏻 Plus d'informations sur le [site Service Public](https://www.service-public.fr/particuliers/vosdroits/F1427)"
+
+  utter_acte_de_décès :
+  - text: "La démarche pour obtenir un acte de décès dépend du lieu du décès. Votre demande concerne-t-elle un décès survenu ::"
+    buttons:
+    - title: "En France"
+      payload: "/décès_en_France"
+    - title: "A l'étranger"
+      payload: "/décès_étranger"
+
+  utter_décès_en_France :
+  - text: "Pour obtenir un acte de décès, plusieurs possibilités s'offrent à vous. Vous pouvez :
+
+◾️ Faire la demande directement en ligne
+◾️ Faire la demande auprès de la Mairie du lieu du décès ou du dernier domicile du défunt
+◾️ Envoyer la demande par voie postale auprès de la Mairie du lieu du décès ou du dernier domicile du défunt, en indiquant les nom et prénoms du défunt et la date du décès"
+
+  utter_décès_en_France_2 :
+  - text: "👉🏻 Plus d'informations sur le [site Service Public](https://www.service-public.fr/particuliers/vosdroits/F1444)"
+
+  utter_décès_étranger :
+  - text: "Pour obtenir un acte de décès, plusieurs possibilités s'offrent à vous. Vous pouvez :
+
+◾️ Faire la demande directement en ligne
+◾️ Envoyer la demande par voie postale auprès du Service central d'état civil de Nantes (Ministère des Affaires Étrangères), en indiquant les nom et prénoms du défunt et la date du décès"
+
+  utter_décès_étranger_2 :
+  - text: "⚠ Pour obtenir une copie d'acte de décès d'une personne étrangère décédée à l'étranger, il faut s'adresser à l'autorité qui a dressé l'acte dans le pays concerné."
+
+  utter_décès_étranger_3 :
+  - text: "👉🏻 Plus d'informations sur le [site Service Public](https://www.service-public.fr/particuliers/vosdroits/F1444)"
+
+  utter_acte_de_mariage :
+  - text: "La démarche pour obtenir un acte de mariage dépend du lieu du décès. Votre demande concerne-t-elle un décès survenu ::"
+    buttons:
+    - title: "En France"
+      payload: "/mariage_en_France"
+    - title: "A l'étranger"
+      payload: "/mariage_étranger"
+      
+  utter_mariage_en_France :
+  - text: "Pour obtenir un acte de mariage, plusieurs possibilités s'offrent à vous. Vous pouvez :
+
+◾️ Faire la demande directement en ligne
+◾️ Déposer votre demande au guichet de la Mairie du lieu du mariage
+◾️ Envoyer la demande par voie postale en indiquant la date du mariage, les noms de famille et prénoms des époux (+ les noms et prénoms des parents pour une copie intégrale ou un extrait avec filiation), l'adresse du demandeur"
+
+  utter_mariage_en_France_2 :
+  - text: "👉🏻 Plus d'informations sur le [site  Service Public](https://www.service-public.fr/particuliers/vosdroits/F1432)"
+
+  utter_mariage_étranger :
+  - text: "Pour obtenir un acte de mariage, plusieurs possibilités s'offrent à vous. Vous pouvez :
+◾️ Faire la demande directement en ligne
+◾️ Envoyer la demande par voie postale auprès du Service central d'état civil de Nantes (Ministère des Affaires Étrangères) en indiquant la date du mariage, les noms de famille et prénoms des époux (+ noms et prénoms des parents pour une copie intégrale ou un extrait avec filiation), l'adresse du demandeur"
+
+  utter_mariage_étranger_2 :
+  - text: "⚠ Pour les mariages célébrés à l'étranger, l'acte de mariage doit avoir été transcrit sur les registres de l'état civil du consulat."
+
+  utter_mariage_étranger_3 :
+  - text: "⚠ Si vous êtes étranger, il faut s'adresser directement à l'autorité qui a établi l'acte."
+
+  utter_mariage_étranger_4 :
+  - text: "👉🏻 Plus d'informations sur le [site  Service Public](https://www.service-public.fr/particuliers/vosdroits/F1432)"
+
+  utter_scec :
+  - text: "Vous pouvez adresser vos demandes au Service central d'état civil de Nantes par voie postale à l'adresse suivante :"
+
+  utter_scec_2 :
+  - text: "Service Central d'État Civil - Ministère de l'Europe et des Affaires Étrangères
+1 Rue de la Maison Blanche
+44100 Nantes"
+
+  utter_scec_3 :
+  - text: "⚠ Le Service central d'état civil de Nantes ne reçoit pas le public"
+
+
+#################################Déménagement########################################
+
+  utter_changement_adresse_CNI :
+  - text: "Vous n'êtes pas obligé de changer l'adresse de vos papiers d'identité lorsque vous déménagez."
+
+  utter_changement_adresse_CNI_2 :
+  - text: "Si vous souhaitez néanmoins que votre nouvelle adresse figure sur votre Carte Nationale d'Identité (CNI) ou votre passeport, vous pouvez faire une demande de renouvellement."
+    buttons:
+    - title: "Demande de renouvellement"
+      payload: "/renouvellement_cni"
+
+
+  utter_inscription_liste_élécorale_suite_déménagement :
+  - text: "La démarche dépend de votre situation. Pouvez-vous me préciser si vous déménagez :"
+    buttons:
+    - title: "Dans la même commune"
+    payload: "/inscription_L_E_même_commune"
+    buttons:
+    - title: "Dans une autre commune"
+      payload: "/inscription_L_E_autre_commune"
+    buttons:
+    - title: "A l'étranger"
+      payload: "/inscription_L_E_étranger"
 
 
 
